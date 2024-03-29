@@ -1,0 +1,12 @@
+2024-03-29 07:23:59,993 - INFO - Upload successful
+2024-03-29 07:24:02,020 - INFO - Upload successful
+2024-03-29 07:24:04,050 - INFO - Upload successful
+2024-03-29 07:24:06,108 - INFO - Upload successful
+2024-03-29 07:25:44,853 - INFO - Upload successful: File='dog-whine.wav', Size=89278 bytes, Response='[{'predictions': [{'category': 'dog', 'probability': 0.9962195754051208}, {'category': 'dog', 'probability': 0.9962195754051208}]}]'
+2024-03-29 07:25:46,880 - INFO - Upload successful: File='cow-nature.wav', Size=58278 bytes, Response='[{'predictions': [{'category': 'door_wood_creaks', 'probability': 0.667904794216156}]}]'
+2024-03-29 07:25:48,910 - INFO - Upload successful: File='heli-running2.wav', Size=266332 bytes, Response='[{'predictions': [{'category': 'helicopter', 'probability': 0.7365294098854065}]}]'
+2024-03-29 07:25:50,968 - INFO - Upload successful: File='doberman-pincher_daniel-simion (1).wav', Size=2504020 bytes, Response='[{'predictions': [{'category': 'dog', 'probability': 0.5526291728019714}, {'category': 'dog', 'probability': 0.5526291728019714}]}]'
+2024-03-29 07:31:20,023 - INFO - Upload successful: File='dog-whine.wav', Size=89278 bytes, Response='[{'predictions': [{'category': 'dog', 'probability': 0.9962195754051208}, {'category': 'dog', 'probability': 0.9962195754051208}]}]'
+2024-03-29 07:31:22,051 - INFO - Upload successful: File='cow-nature.wav', Size=58278 bytes, Response='[{'predictions': [{'category': 'door_wood_creaks', 'probability': 0.667904794216156}]}]'
+2024-03-29 07:31:24,079 - INFO - Upload successful: File='heli-running2.wav', Size=266332 bytes, Response='[{'predictions': [{'category': 'helicopter', 'probability': 0.7365294098854065}]}]'
+2024-03-29 07:31:26,135 - INFO - Upload successful: File='doberman-pincher_daniel-simion (1).wav', Size=2504020 bytes, Response='[{'predictions': [{'category': 'dog', 'probability': 0.5526291728019714}, {'category': 'dog', 'probability': 0.5526291728019714}]}]'

@@ -1,0 +1,12 @@
+__pycache__
+**/__pycache__/
+*.pyc
+
+sqlite3/*
+!sqlite3/.gitkeep
+
+test/*
+temp/*
+
+postgres/*
+!postgres/

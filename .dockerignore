@@ -1,0 +1,11 @@
+.environment/
+Dockerfile
+*/__pycache__/cat 
+docker-compose.yml
+test/*
+e2e/tests/*
+.env
+postgres/*
+temp/*
+makefile/*
+

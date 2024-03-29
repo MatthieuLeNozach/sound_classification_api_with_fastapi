@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "5555:5555"
+    command: uvicorn --reload --host 0.0.0.0 --port 5555 app.main:app
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./e2e_tests/logs:/app/logs  # Mount the logs directory as a volume
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5431:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  test_api:
+    build:
+      context: ./e2e_tests
+      dockerfile: Dockerfile.tests
+    depends_on:
+      - api
+      - db
+    environment:
+      - API_BASE_URL=http://api:5555  # Use the service name as the hostname
+    links:
+      - api
+      - db
+    volumes:
+      - ./e2e_tests/logs:/app/logs
+    #command: ["/run_tests_delayed.sh"] 
+
+volumes:
+  postgres_data:

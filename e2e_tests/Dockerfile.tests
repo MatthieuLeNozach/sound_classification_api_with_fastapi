@@ -1,0 +1,19 @@
+# Use an official Python runtime as a parent image
+FROM python:3.10
+
+# Set the working directory in the container
+WORKDIR /tests
+
+# Copy the current directory contents into the container at /tests
+COPY . /tests
+
+# Install any needed packages specified in requirements.txt
+RUN pip install requests
+
+# Assuming you have a wait-for-it.sh script in your context
+COPY entrypoint.sh /entrypoint.sh
+
+#RUN chmod +x /wait-for-it.sh
+
+#CMD ["/wait-for-it.sh", "api:5555", "--", "python", "/tests/run_tests.py"]
+ENTRYPOINT ["/entrypoint.sh"]
